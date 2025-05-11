@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package header;
+
+option go_package = "github.com/stevezaluk/credstack-models/api";
+
+/*
+PermissionScope - A structure representing a unit of permissions that can be evaluated by the API.
+When marshaled and returned to the user, key and value are appended together in the following format:
+
+`key:value`
+ */
+message PermissionScope {
+  // key - A key for the permission scope
+  string key = 1;
+
+  // value - A value for the permission scope
+  string value = 2;
+}
