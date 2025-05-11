@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package wellknown;
+
+option go_package = "github.com/stevezaluk/credstack-models/wellknown";
+
+/*
+JSONWebKey - A simple structure representing a JSON Web Key
+ */
+message JSONWebKey {
+  // kty - Defines the type of key this JWK represents
+  string kty = 1;
+
+  // use - Defines the use for this JWK, usually sig
+  string use = 2;
+
+  // kid - A unique identifier for the key
+  string kid = 3;
+
+  // alg - Defines the algorithm that this JWK was generated using
+  string alg = 4;
+
+  // n - Public modulos for the key
+  string n = 5;
+
+  // e - Public exponent for the key
+  string e = 6;
+}
+
+/*
+JSONWebKeySet - A standard JSON Web Key Set
+ */
+message JSONWebKeySet {
+
+  // keys - All keys offered by the JWKS
+  repeated JSONWebKey keys = 1;
+}
