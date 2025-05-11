@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package token;
+
+option go_package = "github.com/stevezaluk/credstack-models/token";
+
+/*
+TokenRequest - Universal token request model for use in: Client credentials flow, authorization code flow, and
+password grant flow
+ */
+message TokenRequest {
+  // grant_type - Describes the type of OAuth grant flow you are using
+  string grant_type = 1;
+
+  // client_id - The client id of the application. Can be null in some cases
+  string client_id = 2;
+
+  // client_secret - The client secret of the application. Can be null in some cases
+  string client_secret = 3;
+
+  // audience - The audience for the API you are requesting a token for
+  string audience = 4;
+
+  // code - The code used in Authorization Code flow
+  string code = 5;
+
+  // redirect_uri - The redirect URI used in Authorization code flow
+  string redirect_uri = 6;
+}
