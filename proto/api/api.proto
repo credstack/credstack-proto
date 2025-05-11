@@ -24,11 +24,11 @@ message API {
   // name - The name of the API as defined by the user
   string name = 2;
 
-  // tokenType - The type of tokens the API should issue
-  TokenType tokenType = 3;
+  // token_type - The type of tokens the API should issue
+  TokenType token_type = 3;
 
-  // enforceRbac - Enforce permissions and roles for this API
-  bool enforceRbac = 4;
+  // enforce_rbac - Enforce permissions and roles for this API
+  bool enforce_rbac = 4;
 
   // applications - A list of authorized applications for this API
   repeated string applications = 5;

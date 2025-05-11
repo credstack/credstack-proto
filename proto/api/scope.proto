@@ -16,8 +16,8 @@ message PermissionScope {
   // header - Shared data values used across all objects
   header.Header header = 1;
 
-  // associatedApi - The API this permission scope is assigned to
-  string associatedApi = 2;
+  // associated_api - The API this permission scope is assigned to
+  string associated_api = 2;
 
   // key - A key for the permission scope
   string key = 3;
