@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package user;
 
-import "user/credential.proto";
-import "header/header.proto";
+import "proto/user/credential.proto";
+import "proto/header/header.proto";
 
 option go_package = "github.com/stevezaluk/credstack-models/user";
 
@@ -11,7 +11,8 @@ option go_package = "github.com/stevezaluk/credstack-models/user";
 User - Represents a user registered with CredStack. Describes all standard claims for the OpenID Connect spec
  */
 message User {
-  Header header = 1;
+  // header - Shared data values used across all objects
+  header.Header header = 1;
 
   // sub - A UUID v5 based on the users email address, used for identifying the user
   string sub = 2;
