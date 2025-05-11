@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package application;
+
+import "proto/header/header.proto";
+
+option go_package = "github.com/stevezaluk/credstack-models/application";
+
+/*
+GrantTypes - A list of enums representing an OAuth Grant Type
+ */
+enum GrantTypes {
+  // ClientCredentialsGrant - Client credentials grant allows direct issuance of tokens in exchange for a client ID and secret
+  ClientCredentialsGrant = 0;
+
+  // AuthorizationCodeGrant - Authorization Code Grant + PKCE allows tokens to be issued after the user has authentication with an OIDC provider
+  AuthorizationCodeGrant = 1;
+
+  // PasswordGrant - Deprecated OAuth grant that allows direct issuance of tokens in exchange for raw user credentials
+  PasswordGrant = 2;
+}
+
+/*
+Application - The core resource allowing that provides the issuance of tokens
+ */
+message Application {
+  // header - Shared data values used across all objects
+  header.Header header = 1;
+
+  // clientId - The client ID used in the authorization process
+  string clientId = 2;
+
+  // clientSecret - The client secret used in the authorization process
+  string clientSecret = 3;
+
+  // redirectUri - A redirect URI for the application to redirect to after authorization
+  string redirectUri = 4;
+
+  // tokenLifetime - The amount of time in seconds, before the token expires
+  uint64 tokenLifetime = 5;
+
+  // grantType - The grant types this Application is authorized to issue on
+  repeated GrantTypes grantTypes = 6;
+}
