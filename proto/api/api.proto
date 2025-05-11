@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package header;
+package api;
 
 import "proto/api/scope.proto";
 
