@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package user;
 
+import "user/credential.proto";
+
 option go_package = "github.com/stevezaluk/credstack-models";
 
 /*
@@ -46,4 +48,7 @@ message User {
 
   // address - The users physical mailing address. Can be null
   string address = 13;
+
+  // credential - A message representing the users hashed password. Will be left null when exporting unless explicitly declared
+  UserCredential credential = 14;
 }
