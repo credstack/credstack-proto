@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package header;
+
+option go_package = "github.com/stevezaluk/credstack-models/api";
+
+/*
+TokenType - The type of tokens the API should issue
+ */
+enum TokenType {
+  HS256 = 0;
+  RS256 = 1;
+}
+
+/*
+API - Represents an integrators API. Primarily contains RBAC information and determines the token type
+ */
+message API {
+  // domain - A arbitrary domain used in the audience of issues tokens. Does not need to resolve to anything
+  string domain = 1;
+
+  // name - The name of the API as defined by the user
+  string name = 2;
+
+  // tokenType - The type of tokens the API should issue
+  TokenType tokenType = 3;
+
+  // enforceRbac - Enforce permissions and roles for this API
+  bool enforceRbac = 4;
+}
