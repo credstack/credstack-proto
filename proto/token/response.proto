@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package token;
+
+option go_package = "github.com/stevezaluk/credstack-models/token";
+
+/*
+TokenResponse - Represents an HTTP response containing the credentials requested by the end user
+ */
+message TokenResponse {
+  // access_token - The JWT token as returned by the application
+  string access_token = 1;
+
+  // id_token - The JWT token as returned by the application
+  string id_token = 2;
+
+  // token_type - The type of token this response represents. Usually bearer
+  string token_type = 3;
+
+  // expires_in - The time in seconds that the token expires in
+  uint32 expires_in = 4;
+
+  // refresh_token - The refresh token that the application has issued
+  string refresh_token = 5;
+
+  // scope - A string of space seperated scopes that the user has been issued
+  string scope = 6;
+}
