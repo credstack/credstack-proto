@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package header;
+
+option go_package = "github.com/stevezaluk/credstack-models/header";
+
+/*
+Header - A message representing shared data that is applied to all objects created by credstack
+ */
+message Header {
+  // createdAt - A unix timestamp representing when the object was created
+  int64 createdAt = 1;
+
+  // updatedAt - A unix timestamp representing when the object was last updated
+  int64 updatedAt = 2;
+
+  // accessedAt - A unix timestamp representing when the object was last accessed
+  int64 accessedAt = 3;
+
+  // tags - Arbitrary tags that can be applied to any object
+  map<string, string> tags = 4;
+}
