@@ -8,15 +8,18 @@ option go_package = "github.com/stevezaluk/credstack-models/header";
 Header - A message representing shared data that is applied to all objects created by credstack
  */
 message Header {
+  // identifier - A UUID v5 based on an immutable property of the object this header is attached to.
+  string identifier = 1;
+
   // createdAt - A unix timestamp representing when the object was created
-  int64 createdAt = 1;
+  int64 createdAt = 2;
 
   // updatedAt - A unix timestamp representing when the object was last updated
-  int64 updatedAt = 2;
+  int64 updatedAt = 3;
 
   // accessedAt - A unix timestamp representing when the object was last accessed
-  int64 accessedAt = 3;
+  int64 accessedAt = 4;
 
   // tags - Arbitrary tags that can be applied to any object
-  map<string, string> tags = 4;
+  map<string, string> tags = 5;
 }

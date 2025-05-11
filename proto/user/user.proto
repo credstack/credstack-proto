@@ -14,7 +14,7 @@ message User {
   // header - Shared data values used across all objects
   header.Header header = 1;
 
-  // sub - A UUID v5 based on the users email address, used for identifying the user
+  // sub - A UUID v5 based on the users email address, used for identifying the user. This is the same as the identifier in the header
   string sub = 2;
 
   // username - The username of the user. Does not need to be unique as primary lookup for the user is done via userId
