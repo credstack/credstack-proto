@@ -3,6 +3,7 @@ syntax = "proto3";
 package user;
 
 import "user/credential.proto";
+import "header/header.proto";
 
 option go_package = "github.com/stevezaluk/credstack-models";
 
@@ -10,45 +11,47 @@ option go_package = "github.com/stevezaluk/credstack-models";
 User - Represents a user registered with CredStack. Describes all standard claims for the OpenID Connect spec
  */
 message User {
+  Header header = 1;
+
   // sub - A UUID v5 based on the users email address, used for identifying the user
-  string sub = 1;
+  string sub = 2;
 
   // username - The username of the user. Does not need to be unique as primary lookup for the user is done via userId
-  string username = 2;
+  string username = 3;
 
   // email - The primary email address for the user. Must be unique
-  string email = 3;
+  string email = 4;
 
   // emailVerified - A boolean value describing if the user has validated there email address
-  bool emailVerified = 4;
+  bool emailVerified = 5;
 
   // givenName - The users first name. Can be null, and does not need to be unique
-  string givenName = 5;
+  string givenName = 6;
 
   // middleName - The users middle name. Can be null, and does not need to be unique
-  string middleName = 6;
+  string middleName = 7;
 
   // familyName - The users last name. Can be null, and does not need to be unique
-  string familyName = 7;
+  string familyName = 8;
 
   // gender - The users gender. Can be null
-  string gender = 8;
+  string gender = 9;
 
   // birthDate - The users birthdate represented as YYYY-MM-DD
-  string birthDate = 9;
+  string birthDate = 10;
 
   // zoneInfo - The timezone for the user that should be respected by timestamps. Defaults to America/New_York
-  string zoneInfo = 10;
+  string zoneInfo = 11;
 
   // phoneNumber - The users phone number in the following format +1800-555-555
-  string phoneNumber = 11;
+  string phoneNumber = 12;
 
   // phoneNumberVerified - A boolean value describing if the user has validated there email address
-  string phoneNumberVerified = 12;
+  string phoneNumberVerified = 13;
 
   // address - The users physical mailing address. Can be null
-  string address = 13;
+  string address = 14;
 
   // credential - A message representing the users hashed password. Will be left null when exporting unless explicitly declared
-  UserCredential credential = 14;
+  UserCredential credential = 15;
 }
