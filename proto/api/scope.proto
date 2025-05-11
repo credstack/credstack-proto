@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package api;
 
+import "proto/header/header.proto";
+
 option go_package = "github.com/stevezaluk/credstack-models/api";
 
 /*
@@ -11,9 +13,15 @@ When marshaled and returned to the user, key and value are appended together in 
 `key:value`
  */
 message PermissionScope {
+  // header - Shared data values used across all objects
+  header.Header header = 1;
+
+  // associatedApi - The API this permission scope is assigned to
+  string associatedApi = 2;
+
   // key - A key for the permission scope
-  string key = 1;
+  string key = 3;
 
   // value - A value for the permission scope
-  string value = 2;
+  string value = 4;
 }

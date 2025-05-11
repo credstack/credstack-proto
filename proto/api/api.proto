@@ -32,7 +32,4 @@ message API {
 
   // applications - A list of authorized applications for this API
   repeated string applications = 5;
-
-  // scopes - A list of scopes that can be evaluated for the API
-  repeated PermissionScope scopes = 6;
 }
