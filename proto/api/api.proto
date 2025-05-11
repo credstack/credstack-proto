@@ -27,4 +27,7 @@ message API {
 
   // enforceRbac - Enforce permissions and roles for this API
   bool enforceRbac = 4;
+
+  // applications - A list of authorized applications for this API
+  repeated string applications = 5;
 }
