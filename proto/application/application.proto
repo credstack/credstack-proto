@@ -10,14 +10,14 @@ option go_package = "github.com/stevezaluk/credstack-models/application";
 GrantTypes - A list of enums representing an OAuth Grant Type
  */
 enum GrantTypes {
-  // ClientCredentialsGrant - Client credentials grant allows direct issuance of tokens in exchange for a client ID and secret
-  ClientCredentialsGrant = 0;
+  // client_credentials - Client credentials grant allows direct issuance of tokens in exchange for a client ID and secret
+  client_credentials = 0;
 
-  // AuthorizationCodeGrant - Authorization Code Grant + PKCE allows tokens to be issued after the user has authentication with an OIDC provider
-  AuthorizationCodeGrant = 1;
+  // authorization_code - Authorization Code Grant + PKCE allows tokens to be issued after the user has authentication with an OIDC provider
+  authorization_code = 1;
 
-  // PasswordGrant - Deprecated OAuth grant that allows direct issuance of tokens in exchange for raw user credentials
-  PasswordGrant = 2;
+  // password - Deprecated OAuth grant that allows direct issuance of tokens in exchange for raw user credentials
+  password = 2;
 }
 
 /*
