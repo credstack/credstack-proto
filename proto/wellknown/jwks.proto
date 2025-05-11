@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wellknown;
+
+import "proto/token/jwk.proto";
+
+option go_package = "github.com/stevezaluk/credstack-models/wellknown";
+
+/*
+JSONWebKeySet - A standard JSON Web Key Set
+ */
+message JSONWebKeySet {
+
+  // keys - All keys offered by the JWKS
+  repeated token.JSONWebKey keys = 1;
+}

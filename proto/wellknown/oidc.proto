@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package wellknown;
+
+option go_package = "github.com/stevezaluk/credstack-models/wellknown";
+
+/*
+OIDCConfiguration - Defines common endpoints in OAuth and OIDC
+ */
+message OIDCConfiguration {
+  // issuer - The issuer defined by the API structure
+  string issuer = 1;
+
+  // authorization_endpoint - The authorization endpoint that can be used with Authorization Code Flow
+  string authorization_endpoint = 2;
+
+  // token_endpoint - Defines the endpoint that allows tokens to be retrieved at
+  string token_endpoint = 3;
+
+  // userinfo_endpoint - Defines the endpoint where ID Tokens can be exchanged for user information
+  string userinfo_endpoint = 4;
+
+  // jwks_uri - The URI that OIDC exposes JWKS information for signing RS256 (id) tokens
+  string jwks_uri = 5;
+
+  // end_session_endpoint - Defines the endpoint where users can logout of there existing session
+  string end_session_endpoint = 6;
+
+  // registration_endpoint - Defines the endpoint where new users can register an account
+  string registration_endpoint = 7;
+}

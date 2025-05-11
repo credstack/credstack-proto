@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package wellknown;
+
+option go_package = "github.com/stevezaluk/credstack-models/wellknown";
+
+/*
+OAuthConfiguration - Defines and well known endpoints in relation to OAuth
+ */
+message OAuthConfiguration {
+  // issuer - The issuer defined by the API structure
+  string issuer = 1;
+
+  // authorization_endpoint - The authorization endpoint that can be used with Authorization Code Flow
+  string authorization_endpoint = 2;
+
+  // token_endpoint - Defines the endpoint that allows tokens to be retrieved at
+  string token_endpoint = 3;
+
+  // revocation_endpoint - Defines the endpoint that allows tokens to be revoked at
+  string revocation_endpoint = 4;
+
+  // introspection_endpoint - Defines the endpoint that tokens can be inspected/validated at
+  string introspection_endpoint = 5;
+
+  // jwks_uri - The URI that OIDC exposes JWKS information for signing RS256 (id) tokens
+  string jwks_uri = 6;
+
+}
