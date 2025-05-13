@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package token;
+package request;
 
-option go_package = "github.com/stevezaluk/credstack-models/token";
+option go_package = "github.com/stevezaluk/credstack-models/request";
 
 /*
 TokenRequest - Universal token request model for use in: Client credentials flow, authorization code flow, and
