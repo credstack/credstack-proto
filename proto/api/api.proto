@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package api;
 
-option go_package = "github.com/stevezaluk/credstack-models/api";
+option go_package = "github.com/stevezaluk/credstack-models/proto/api";
 
 /*
 TokenType - The type of tokens the API should issue

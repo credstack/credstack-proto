@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package header;
 
-option go_package = "github.com/stevezaluk/credstack-models/header";
+option go_package = "github.com/stevezaluk/credstack-models/proto/header";
 
 /*
 Header - A message representing shared data that is applied to all objects created by credstack
