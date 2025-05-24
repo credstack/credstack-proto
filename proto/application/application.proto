@@ -25,20 +25,20 @@ Application - The core resource allowing that provides the issuance of tokens
  */
 message Application {
   // header - Shared data values used across all objects
-  header.Header header = 1;
+  header.Header header = 1; // @gotags: bson:"header"
 
   // client_id - The client ID used in the authorization process
-  string client_id = 2;
+  string client_id = 2; // @gotags: bson:"client_id"
 
   // client_secret - The client secret used in the authorization process
-  string client_secret = 3;
+  string client_secret = 3; // @gotags: bson:"client_secret"
 
   // redirect_uri - A redirect URI for the application to redirect to after authorization
-  string redirect_uri = 4;
+  string redirect_uri = 4; // @gotags: bson:"redirect_uri"
 
   // token_lifetime - The amount of time in seconds, before the token expires
-  uint64 token_lifetime = 5;
+  uint64 token_lifetime = 5; // @gotags: bson:"token_lifetime"
 
   // grant_type - The grant types this Application is authorized to issue on
-  repeated GrantTypes grant_type = 6;
+  repeated GrantTypes grant_type = 6; // @gotags: bson:"grant_type"
 }
