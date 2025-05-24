@@ -9,20 +9,20 @@ JSONWebKey - A simple structure representing a JSON Web Key
  */
 message JSONWebKey {
   // kty - Defines the type of key this JWK represents
-  string kty = 1;
+  string kty = 1; // @gotags: bson:"kty"
 
   // use - Defines the use for this JWK, usually sig
-  string use = 2;
+  string use = 2; // @gotags: bson:"use"
 
   // kid - A unique identifier for the key
-  string kid = 3;
+  string kid = 3; // @gotags: bson:"kid"
 
   // alg - Defines the algorithm that this JWK was generated using
-  string alg = 4;
+  string alg = 4; // @gotags: bson:"alg"
 
   // n - Public modulos for the key
-  string n = 5;
+  string n = 5; // @gotags: bson:"n"
 
   // e - Public exponent for the key
-  string e = 6;
+  string e = 6; // @gotags: bson:"e"
 }

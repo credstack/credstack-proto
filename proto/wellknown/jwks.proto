@@ -12,5 +12,5 @@ JSONWebKeySet - A standard JSON Web Key Set
 message JSONWebKeySet {
 
   // keys - All keys offered by the JWKS
-  repeated token.JSONWebKey keys = 1;
+  repeated token.JSONWebKey keys = 1; // @gotags: bson:"keys"
 }

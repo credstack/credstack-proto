@@ -6,11 +6,11 @@ option go_package = "github.com/stevezaluk/credstack-models/proto/request";
 
 message LoginRequest {
   // email - The primary email address for the user. Must be unique
-  string email = 1;
+  string email = 1; // @gotags: bson:"email"
 
   // password - The plain text password for the user. Will be hashed on the server-side using ArgonV2ID
-  string password = 2;
+  string password = 2; // @gotags: bson:"password"
 
   // mfaCode - The user's multifactor authentication code generated on there device
-  uint32 mfaCode = 3;
+  uint32 mfa_code = 3; // @gotags: bson:"mfa_code"
 }
