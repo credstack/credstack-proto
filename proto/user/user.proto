@@ -48,7 +48,7 @@ message User {
   string phone_number = 12; // @gotags: bson:"phone_number"
 
   // phone_number_verified - A boolean value describing if the user has validated there email address
-  string phone_number_verified = 13; // @gotags: bson:"phone_number_verified"
+  bool phone_number_verified = 13; // @gotags: bson:"phone_number_verified"
 
   // address - The users physical mailing address. Can be null
   string address = 14; // @gotags: bson:"address"
