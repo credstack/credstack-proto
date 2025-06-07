@@ -4,7 +4,7 @@ package wellknown;
 
 import "proto/token/jwk.proto";
 
-option go_package = "github.com/stevezaluk/credstack-models/proto/wellknown";
+option go_package = "github.com/stevezaluk/credstack-lib/proto/wellknown";
 
 /*
 JSONWebKeySet - A standard JSON Web Key Set

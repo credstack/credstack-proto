@@ -4,7 +4,7 @@ package api;
 
 import "proto/header/header.proto";
 
-option go_package = "github.com/stevezaluk/credstack-models/proto/api";
+option go_package = "github.com/stevezaluk/credstack-lib/proto/api";
 
 /*
 TokenType - The type of tokens the API should issue

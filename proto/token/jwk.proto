@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package token;
 
-option go_package = "github.com/stevezaluk/credstack-models/proto/token";
+option go_package = "github.com/stevezaluk/credstack-lib/proto/token";
 
 /*
 JSONWebKey - A simple structure representing a JSON Web Key
