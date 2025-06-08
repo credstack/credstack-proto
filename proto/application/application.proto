@@ -28,7 +28,7 @@ message Application {
   header.Header header = 1; // @gotags: bson:"header"
 
   // name - A user provided, arbitrary name for the application
-  string name = 2; // @gotags:"name"
+  string name = 2; // @gotags: bson:"name"
 
   // client_id - The client ID used in the authorization process
   string client_id = 3; // @gotags: bson:"client_id"
