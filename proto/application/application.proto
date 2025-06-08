@@ -27,18 +27,21 @@ message Application {
   // header - Shared data values used across all objects
   header.Header header = 1; // @gotags: bson:"header"
 
+  // name - A user provided, arbitrary name for the application
+  string name = 2; // @gotags: bson:"name"
+
   // client_id - The client ID used in the authorization process
-  string client_id = 2; // @gotags: bson:"client_id"
+  string client_id = 3; // @gotags: bson:"client_id"
 
   // client_secret - The client secret used in the authorization process
-  string client_secret = 3; // @gotags: bson:"client_secret"
+  string client_secret = 4; // @gotags: bson:"client_secret"
 
   // redirect_uri - A redirect URI for the application to redirect to after authorization
-  string redirect_uri = 4; // @gotags: bson:"redirect_uri"
+  string redirect_uri = 5; // @gotags: bson:"redirect_uri"
 
   // token_lifetime - The amount of time in seconds, before the token expires
-  uint64 token_lifetime = 5; // @gotags: bson:"token_lifetime"
+  uint64 token_lifetime = 6; // @gotags: bson:"token_lifetime"
 
   // grant_type - The grant types this Application is authorized to issue on
-  repeated GrantTypes grant_type = 6; // @gotags: bson:"grant_type"
+  repeated GrantTypes grant_type = 7; // @gotags: bson:"grant_type"
 }
