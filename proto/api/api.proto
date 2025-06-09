@@ -21,7 +21,7 @@ message API {
   header.Header header = 1; // @gotags: bson:"header"
 
   // domain - A arbitrary domain used in the audience of issues tokens. Does not need to resolve to anything
-  string domain = 2; // @gotags: bson:"domains"
+  string domain = 2; // @gotags: bson:"domain"
 
   // name - The name of the API as defined by the user
   string name = 3; // @gotags: bson:"name"
