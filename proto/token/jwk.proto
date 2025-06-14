@@ -48,11 +48,11 @@ message KeyPair {
   // alg - Defines the algorithm that this JWK was generated using
   string alg = 5; // @gotags: bson:"alg"
 
-  // n - Public modulos for the key
+  // n - Public modulos for the key stored as a base64 encoded string
   string n = 6; // @gotags: bson:"n"
 
   // e - Public exponent for the key
-  string e = 7; // @gotags: bson:"e"
+  int64 e = 7; // @gotags: bson:"e"
 
   // d - The private exponent stored as a base64 encoded string
   string d = 8; // @gotags: bson:"d"
