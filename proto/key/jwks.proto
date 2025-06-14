@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package key;
+
+import "proto/key/jwk.proto";
+
+option go_package = "github.com/stevezaluk/credstack-lib/proto/key";
+
+/*
+JSONWebKeySet - A standard JSON Web Key Set
+ */
+message JSONWebKeySet {
+  // keys - All keys offered by the JWKS
+  repeated key.JSONWebKey keys = 1; // @gotags: bson:"keys"
+}
