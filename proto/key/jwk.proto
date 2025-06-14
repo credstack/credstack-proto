@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package token;
+package key;
 
 import "proto/header/header.proto";
 
-option go_package = "github.com/stevezaluk/credstack-lib/proto/token";
+option go_package = "github.com/stevezaluk/credstack-lib/proto/key";
 
 /*
 JSONWebKey - A simple structure representing a public JSON Web Key
