@@ -2,10 +2,12 @@ syntax = "proto3";
 
 package token;
 
+import "proto/header/header.proto";
+
 option go_package = "github.com/stevezaluk/credstack-lib/proto/token";
 
 /*
-JSONWebKey - A simple structure representing a JSON Web Key
+JSONWebKey - A simple structure representing a public JSON Web Key
  */
 message JSONWebKey {
   // kty - Defines the type of key this JWK represents
@@ -25,4 +27,48 @@ message JSONWebKey {
 
   // e - Public exponent for the key
   string e = 6; // @gotags: bson:"e"
+}
+
+/*
+KeyPair - Represents a private RSA key that is stored within MongoDB
+ */
+message KeyPair {
+  // header - The generated header for the key pair
+  header.Header header = 1;
+
+  // kty - Defines the type of key this JWK represents
+  string kty = 2; // @gotags: bson:"kty"
+
+  // use - Defines the use for this JWK, usually sig
+  string use = 3; // @gotags: bson:"use"
+
+  // kid - A unique identifier for the key
+  string kid = 4; // @gotags: bson:"kid"
+
+  // alg - Defines the algorithm that this JWK was generated using
+  string alg = 5; // @gotags: bson:"alg"
+
+  // n - Public modulos for the key
+  string n = 6; // @gotags: bson:"n"
+
+  // e - Public exponent for the key
+  string e = 7; // @gotags: bson:"e"
+
+  // d - The private exponent stored as a base64 encoded string
+  string d = 8;
+
+  // p - The first prime factor stored as base64 encoded string
+  string p = 9;
+
+  // q - The second prime factor stored as base64 encoded string
+  string q = 10;
+
+  // dp - The first CRT exponent stored as a base64 encoded string
+  string dp = 11;
+
+  // dq - The second CRT Exponent stored as a base64 encoded string
+  string dq = 12;
+
+  // qi - The first CRT Co-efficient stored as a base64 encoded string
+  string qi = 13;
 }
