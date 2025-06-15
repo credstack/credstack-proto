@@ -7,7 +7,8 @@ import "proto/header/header.proto";
 option go_package = "github.com/stevezaluk/credstack-lib/proto/key";
 
 /*
-PrivateJSONWebKey - Represents a private RSA key that is stored within MongoDB
+PrivateJSONWebKey - Represents a encryption key that can be used for signing tokens. This model can be used for both
+RS tokens and HS tokens
  */
 message PrivateJSONWebKey {
   // header - The generated header for the key pair
