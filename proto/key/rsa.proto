@@ -7,9 +7,9 @@ import "proto/header/header.proto";
 option go_package = "github.com/stevezaluk/credstack-lib/proto/key";
 
 /*
-RSAPrivateKey - Represents a private RSA key that is stored within MongoDB
+PrivateJSONWebKey - Represents a private RSA key that is stored within MongoDB
  */
-message RSAPrivateKey {
+message PrivateJSONWebKey {
   // header - The generated header for the key pair
   header.Header header = 1; // @gotags: bson:"header"
 
