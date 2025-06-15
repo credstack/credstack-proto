@@ -25,4 +25,7 @@ message PrivateJSONWebKey {
 
   // is_current - If set to true, then this key is selected for signing tokens
   bool is_current = 5; // @gotags: bson:"is_current"
+
+  // audience - The audience of the API that this key was allocated for
+  string audience = 6; // @gotags: bson:"audience"
 }
