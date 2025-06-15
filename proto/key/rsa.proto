@@ -13,9 +13,15 @@ message RSAPrivateKey {
   // header - The generated header for the key pair
   header.Header header = 1; // @gotags: bson:"header"
 
+  // alg - Specify's the algorithm used for generating the key
+  string alg = 2; // @gotags: bson:"alg"
+
   // key_material - The PEM encoded private key
-  string key_material = 2; // @gotags: bson:"key_material"
+  string key_material = 3; // @gotags: bson:"key_material"
 
   // size - The size of the key in bits
-  int64 size = 3; // @gotags: bson:"size"
+  int64 size = 4; // @gotags: bson:"size"
+
+  // is_current - If set to true, then this key is selected for signing tokens
+  bool is_current = 5; // @gotags: bson:"is_current"
 }
