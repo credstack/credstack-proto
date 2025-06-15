@@ -2,8 +2,6 @@ syntax = "proto3";
 
 package key;
 
-import "proto/header/header.proto";
-
 option go_package = "github.com/stevezaluk/credstack-lib/proto/key";
 
 /*
