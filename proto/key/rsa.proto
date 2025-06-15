@@ -13,8 +13,8 @@ message RSAPrivateKey {
   // header - The generated header for the key pair
   header.Header header = 1; // @gotags: bson:"header"
 
-  // keyMaterial - The PEM encoded private key
-  string keyMaterial = 2; // @gotags: bson:"keyMaterial"
+  // key_material - The PEM encoded private key
+  string key_material = 2; // @gotags: bson:"key_material"
 
   // size - The size of the key in bits
   int64 size = 3; // @gotags: bson:"size"
