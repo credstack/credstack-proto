@@ -31,7 +31,4 @@ message API {
 
   // enforce_rbac - Enforce permissions and roles for this API
   bool enforce_rbac = 5; // @gotags: bson:"enforce_rbac"
-
-  // applications - A list of authorized applications for this API
-  repeated string applications = 6; // @gotags: bson:"applications"
 }

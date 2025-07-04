@@ -44,4 +44,7 @@ message Application {
 
   // grant_type - The grant types this Application is authorized to issue on
   repeated GrantTypes grant_type = 7; // @gotags: bson:"grant_type"
+
+  // allowed_audiences - A list of strings that represents which API's this application can issue tokens for
+  repeated string allowed_audiences = 8; // @gotags: bson:"allowed_audiences"
 }
