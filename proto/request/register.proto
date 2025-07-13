@@ -10,14 +10,14 @@ Any values not provided in this request must be modified after user-registration
  */
 message UserRegisterRequest {
   // email - The primary email address for the user. Must be unique
-  string email = 1; // @gotags: bson:"email"
+  string email = 1; // @gotags: bson:"email" form:"email"
 
   // username - The username of the user. Does not need to be unique as primary lookup for the user is done via userId
-  string username = 2; // @gotags: bson:"username"
+  string username = 2; // @gotags: bson:"username" form:"username"
 
   // password - The plain text password for the user. Will be hashed on the server-side using ArgonV2ID
-  string password = 3; // @gotags: bson:"password"
+  string password = 3; // @gotags: bson:"password" form:"password"
 
   // phone_number - The users phone number in the following format +1800-555-555
-  string phone_number = 4; // @gotags: bson:"phone_number"
+  string phone_number = 4; // @gotags: bson:"phone_number" form:"phone_number"
 }
