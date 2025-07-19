@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package token;
 
-option go_package = "github.com/credstack/credstack-lib/proto/response";
+option go_package = "github.com/credstack/credstack-lib/proto/token";
 
 /*
 TokenResponse - Represents an HTTP response containing the credentials requested by the end user
