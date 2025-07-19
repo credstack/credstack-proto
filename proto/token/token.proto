@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package response;
+package token;
 
 option go_package = "github.com/credstack/credstack-lib/proto/response";
 
