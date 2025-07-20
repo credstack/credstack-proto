@@ -4,7 +4,7 @@ package key;
 
 import "proto/key/jwk.proto";
 
-option go_package = "github.com/credstack/credstack-lib/proto/key";
+option go_package = "github.com/credstack/credstack-models/proto/key";
 
 /*
 JSONWebKeySet - A standard JSON Web Key Set
