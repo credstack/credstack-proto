@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package key;
+package jwk;
 
 option go_package = "github.com/credstack/credstack-models/proto/key";
 
