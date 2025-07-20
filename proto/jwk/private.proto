@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package key;
+package jwk;
 
 import "proto/header/header.proto";
 
-option go_package = "github.com/credstack/credstack-lib/proto/key";
+option go_package = "github.com/credstack/credstack-models/proto/key";
 
 /*
 PrivateJSONWebKey - Represents a encryption key that can be used for signing tokens. This model can be used for both
