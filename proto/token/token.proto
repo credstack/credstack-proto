@@ -23,12 +23,18 @@ message Token {
   // refresh_token - The refresh token that was issued
   string refresh_token = 4; // @gotags: bson:"refresh_token"
 
+  // id_token - The ID token that was issued
+  string id_token = 5; // @gotags: bson:"id_token"
+
+  // expires_in - The time in seconds that the token expires in
+  uint32 expires_in = 6; // @gotags: bson:"expires_in"
+
   // expires_at - A timestamp that represents the datetime in which the access token expires
-  google.protobuf.Timestamp expires_at = 5; // @gotags: bson:"expires_at"
+  google.protobuf.Timestamp expires_at = 7; // @gotags: bson:"expires_at"
 
   // refresh_expires_at - A timestamp that represents the datetime in which the refresh token expires
-  google.protobuf.Timestamp refresh_expires_at = 6; // @gotags: bson:"refresh_expires_at"
+  google.protobuf.Timestamp refresh_expires_at = 8; // @gotags: bson:"refresh_expires_at"
 
   // scope - Any permission scopes that were issued with the token
-  string scope = 7; // @gotags: bson:"scope"
+  string scope = 9; // @gotags: bson:"scope"
 }
