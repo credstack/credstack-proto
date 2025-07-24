@@ -5,9 +5,9 @@ package token;
 option go_package = "github.com/credstack/credstack-models/proto/token";
 
 /*
-TokenIntrospectionResponse - Represents a response from the endpoint /oauth/introspect
+TokenIntrospectResponse - Represents a response from the endpoint /oauth/introspect
  */
-message TokenIntrospectionResponse {
+message TokenIntrospectResponse {
   // active - A boolean value that determines if the token is active or not
   bool active = 1; // @gotags: bson:"active"
 
